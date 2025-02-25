@@ -15,7 +15,7 @@ soup = BeautifulSoup(response.text, 'html.parser')
 
 # Find the table containing Dow Jones Industrial Average components
 try:
-    table = soup.find("table",{"class":"wikitable"})
+    table = soup.find("table",{"id":"constituents"})
     
     # Extract the headers
     row_header = table.find_all("tr")[0] 
